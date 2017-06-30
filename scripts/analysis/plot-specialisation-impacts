@@ -1,0 +1,63 @@
+#!/usr/bin/gnuplot
+
+#$Id: plot-specialisation-impacts $
+
+#set term aqua title system("pwd") size 512 512
+
+unset multiplot
+set key off
+
+
+set style circle radius graph 0.018
+set style fill transparent solid 0.01 noborder
+set size square
+set grid noxtics noytics
+
+
+set multiplot layout 2,5
+
+set xtics 5
+
+set yrange [0:25]
+#set ylabel 'red pucks'
+set ylabel ''
+set label 1 'red pucks' at -5,12.5 center rotate by 90
+
+set xrange [0:25]
+set xlabel 'green pucks'
+
+set title 'specialisation level 1.0'
+plot "<awk '998000 < $1 && $1 < 999000 {print $3,$4}' specialisation.1.0/*.collected" w circles notitle lc rgb("navy")
+
+unset label 1
+
+set title 'specialisation level 1.2'
+plot "<awk '998000 < $1 && $1 < 999000 {print $3,$4}' specialisation.1.2/*.collected" w circles notitle lc rgb("navy")
+
+set title 'specialisation level 1.5'
+plot "<awk '998000 < $1 && $1 < 999000 {print $3,$4}' specialisation.1.5/*.collected" w circles notitle lc rgb("navy")
+
+set title 'specialisation level 2.0'
+plot "<awk '998000 < $1 && $1 < 999000 {print $3,$4}' specialisation.2.0/*.collected" w circles notitle lc rgb("navy")
+
+set title 'specialisation level 3.0'
+plot "<awk '998000 < $1 && $1 < 999000 {print $3,$4}' specialisation.3.0/*.collected" w circles notitle lc rgb("navy")
+
+unset title
+set xlabel "green puck ratio"
+set ylabel ""
+set label 1 'count' at -0.2,5 center rotate by 90
+set yrange [0:10]
+set xrange [0:1]
+set xtics 0.25
+plot "< awk '$1==998000{print $0}' specialisation.1.0/pucks-collected-ratio.0 | gawk -f ~/projects/awk/transpose.awk | tail -n 64 | gawk -f ~/projects/awk/histogram.awk 0 1 50" w impulse lw 4 lc rgb("#242485") notitle
+
+unset label 1
+
+plot "< awk '$1==998000{print $0}' specialisation.1.2/pucks-collected-ratio.0 | gawk -f ~/projects/awk/transpose.awk | tail -n 64 | gawk -f ~/projects/awk/histogram.awk 0 1 50" w impulse lw 4 lc rgb("#242485") notitle
+
+plot "< awk '$1==998000{print $0}' specialisation.1.5/pucks-collected-ratio.0 | gawk -f ~/projects/awk/transpose.awk | tail -n 64 | gawk -f ~/projects/awk/histogram.awk 0 1 50" w impulse lw 4 lc rgb("#242485") notitle
+
+plot "< awk '$1==998000{print $0}' specialisation.2.0/pucks-collected-ratio.0 | gawk -f ~/projects/awk/transpose.awk | tail -n 64 | gawk -f ~/projects/awk/histogram.awk 0 1 50" w impulse lw 4 lc rgb("#242485") notitle
+
+plot "< awk '$1==998000{print $0}' specialisation.3.0/pucks-collected-ratio.0 | gawk -f ~/projects/awk/transpose.awk | tail -n 64 | gawk -f ~/projects/awk/histogram.awk 0 1 50" w impulse lw 4 lc rgb("#242485") notitle

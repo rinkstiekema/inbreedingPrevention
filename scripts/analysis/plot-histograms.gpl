@@ -1,0 +1,29 @@
+#!/opt/local/bin/gnuplot -persist
+#
+unset grid
+set size square
+set title system('pwd')
+set xlabel "green puck ratio"
+set ylabel "count"
+set yrange [ 0.00000 : 15.0000 ]
+
+data="< awk '$1==399000{print $0}' pucks-collected-ratio.0 | gawk -f ~/projects/awk/transpose.awk | tail -n 64 | gawk -f ~/projects/awk/histogram.awk 0 1 50"
+
+# Following line for regular histogram, lines below that fit and plot a normal distribution
+# plot data w impulse lw 4 notitle
+
+# Fit a normal distribution to data
+# Initial parameters
+sigma=1
+mu=0.5
+
+# Define normal distribution func
+#Gauss(x) = 1./(sigma*sqrt(2*pi)) * exp( -(x-mu)**2 / (2*sigma**2) )
+
+# do the fitting
+#fit Gauss(x) data using 1:2 via sigma, mu
+
+# plot fitted curve and the points
+plot data w impulse lw 4 notitle
+
+

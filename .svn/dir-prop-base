@@ -1,0 +1,17 @@
+K 10
+svn:ignore
+V 99
+roborobo
+.nfs00000000004524870000000b
+resultes/v7/*
+.depend
+
+.project
+
+.cproject
+
+.settings
+
+build
+
+END

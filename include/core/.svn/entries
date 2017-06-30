@@ -1,0 +1,52 @@
+10
+
+dir
+3638
+svn://svn.few.vu.nl/svnroot/ci/projects/RoboRobo/branches/nikita/include/core
+svn://svn.few.vu.nl/svnroot/ci
+
+
+
+2012-03-26T07:50:52.847276Z
+3348
+berend
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+66aa89a0-e36d-4d5e-8122-871f38bf1fb8
+
+Agents
+dir
+
+Config
+dir
+
+BehaviorControlArchitectures
+dir
+
+World
+dir
+
+RoboroboMain
+dir
+
+Observers
+dir
+
+Utilities
+dir
+
+WorldModels
+dir
+

@@ -1,0 +1,7 @@
+ #!/usr/bin/Rscript
+
+args <- commandArgs(TRUE)
+
+fr <- read.table(args[1])
+
+cor(fr[,1],fr[,2],method="kendall")

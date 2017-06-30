@@ -1,0 +1,16 @@
+--iterations 1000000  --task1premium -1 --logdir /home/haasdijk/monee/results/specialisation/market/premium.-1.0  --specialisation
+--iterations 1000000  --task1premium 0 --logdir /home/haasdijk/monee/results/specialisation/market/premium.0.0  --specialisation
+--iterations 1000000  --task1premium 1 --logdir /home/haasdijk/monee/results/specialisation/market/premium.1.0  --specialisation
+--iterations 1000000  --task1premium 5 --logdir /home/haasdijk/monee/results/specialisation/market/premium.5.0  --specialisation
+--iterations 1000000  --task1premium 10 --logdir /home/haasdijk/monee/results/specialisation/market/premium.10.0  --specialisation
+--iterations 1000000  --task1premium 20 --logdir /home/haasdijk/monee/results/specialisation/market/premium.20.0  --specialisation
+--iterations 1000000  --task1premium 50 --logdir /home/haasdijk/monee/results/specialisation/market/premium.50.0  --specialisation
+--iterations 1000000  --task1premium 100 --logdir /home/haasdijk/monee/results/specialisation/market/premium.100.0  --specialisation
+--iterations 1000000  --task1premium -1 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.-1.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 0 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.0.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 1 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.1.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 5 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.5.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 10 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.10.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 20 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.20.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 50 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.50.0  --specialisation --nomarket
+--iterations 1000000  --task1premium 100 --logdir /home/haasdijk/monee/results/specialisation/nomarket/premium.100.0  --specialisation --nomarket
